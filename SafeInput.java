@@ -107,7 +107,7 @@ public class SafeInput {
         String response = "";
         do {
             System.out.print("\n" + prompt + ": ");
-            response = pipe.nextLine();
+            response = pipe.next();
             if (response.equalsIgnoreCase("Y")) {
                 retYNConfirm = true;
                 done = true;
