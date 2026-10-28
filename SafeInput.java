@@ -139,4 +139,38 @@ public class SafeInput {
         }
         return input;
     }
+    public static void prettyHeader(String msg) {
+        int totalWidth = 60;
+        int borderStars = 3;
+        int innerWidth = totalWidth - (2 * borderStars);
+
+        for (int i = 0; i < totalWidth; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("***");
+
+        int spaceNeeded = innerWidth - msg.length();
+        int leftPadding = spaceNeeded / 2;
+        int rightPadding = spaceNeeded - leftPadding;
+
+        for (int i = 0; i < leftPadding; i++) {
+            System.out.print(" ");
+        }
+
+        System.out.print(msg);
+
+        for (int i = 0; i < rightPadding; i++) {
+            System.out.print(" ");
+        }
+
+        System.out.print("***");
+        System.out.println();
+
+        for (int i = 0; i < totalWidth; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
 }
